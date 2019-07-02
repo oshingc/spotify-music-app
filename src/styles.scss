@@ -1,1 +1,222 @@
 /* You can add global styles to this file, and also import other style files */
+/*F0EFF4
+C1BDD2
+A19EAE*/
+$primary:"#4F3EE5";
+/*D8B6AC
+403E43
+D5635B*/
+
+
+.overflow-hidden{
+    overflow-y: hidden !important;
+}
+
+.font-10 {
+  font-size: 10px !important;
+}
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+.font-15 {
+  font-size: 15px !important;
+}
+
+.font-11 {
+  font-size: 11px;
+}
+
+.font-21 {
+  font-size: 21px;
+}
+
+.vz-stack-2x .vz:last-child {
+    font-size: 24px;
+    left: 8px;
+    top: 8px;
+}
+
+.message-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.message-overlay .block{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #FFF;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.90;
+  opacity: 0.90;
+  z-index: 1;
+}
+
+.message-overlay .msg {
+    padding: 5px 15px 15px 15px;
+    color: #000;
+    position: absolute;
+    top: 47%;
+    z-index: 2;
+    left: 25%;
+    width: 50%;
+}
+
+@-webkit-keyframes infinite-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes infinite-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.message-overlay .loading {
+    background-image: url("./assets/icon/loader.svg");
+    background-repeat: no-repeat;
+    -webkit-animation: infinite-spin .75s infinite linear;
+    animation: infinite-spin .75s infinite linear;
+}
+.message-overlay .loading {
+    height: 45px;
+    width: 45px;
+    background-position: 50%;
+    margin: 0 auto 5px;
+}
+
+.menu-blocker {
+    display: block;
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 4;
+    opacity: 0;
+    background: rgba(0,0,0,0.4);
+    transition: opacity ease 0.5s;
+}
+
+.menu-blocker.in{
+    opacity: 1;
+    width: 100%;
+}
+
+select.form-control {
+  padding-right: 25px;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-size: 13px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAdCAMAAAA0LHRjAAAAJFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmWAJHAAAAC3RSTlMAEDBQYHCPn7/P7yl1DtMAAAB2SURBVHgBxdExFgIxDANRERwM8f3vSzcdSNXudH7Pv5KuqltB6xRgphMwswH/CWCmEb8JgC/I+5ECyAdigSAhMASwpYgASjLEAUEMsOQJCEkNwBAH6AVxgArCcQCGAJYUkhRANiAlgJwAcgKICSAlgJQw/B19AV3iC4OAU5mBAAAAAElFTkSuQmCC);
+}
+
+select.form-control::-ms-expand {
+  display: none;
+}
+
+/**
+*  TODO: CHECK THESE STYLES TO BE REMOVED
+**/
+
+.clear-both {
+    clear: both;
+}
+
+chart {
+    display:block;
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 230px;
+    position: relative;
+}
+
+.modelessLayer, #gNavHeader{
+  z-index: 999 !important;
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+}
+
+// TODO: REPLACE FOR position-relative
+.vz-relative{
+    position: relative;
+}
+
+.ui-unselectable-text.ui-sortable-column.ui-state-active{
+  position: relative;
+}
+
+.orders-filter-by-cmb {
+    border: none !important;
+    border-bottom: 1px solid #000 !important;
+    .ui-inputtext {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .ui-widget-content {
+      min-width: 100% !important;
+    }
+    .ui-dropdown-trigger {
+      right: 8px;
+    }
+}
+@media (max-width: 499px) {
+    .orders-filter-by-cmb {
+        width: 100% !important;
+    }
+}
+
+ .ui-fileupload input[type="file"]::-webkit-file-upload-button{
+  font-family: "NeueHaasGroteskDisplay";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #000;
+  color: #fff;
+  margin: 8px 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+@media print{
+  #gNavHeader, #globalNavFooter, .korechatwindowshowMsgBot{
+    display: none !important;
+  }
+}
